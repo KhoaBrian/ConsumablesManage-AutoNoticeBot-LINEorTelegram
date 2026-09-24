@@ -6,6 +6,13 @@
 
 Lab Consumables Management App is a desktop inventory and transaction manager for laboratory consumables. It records FillIn and TakeOut activity, maintains stock levels, provides Excel reports, and delivers operational alerts through Telegram and LINE.
 
+## Typical workflow in a lab
+- Setup (admin): Run the desktop app, create users and consumables, set low-stock thresholds, and configure Telegram/LINE credentials in Admin Settings.
+- Daily use (members): Log FillIn/TakeOut via the desktop app or bot (e.g. /log Alice takeout 2 Ethanol), and check stock with /checkstock <chemical> | all.
+- Automated alerts: The app periodically checks stock and sends low-stock notifications to the configured Telegram chat or LINE group.
+- Monthly reporting (admin): Export filtered history and two-sheet monthly usage reports to Excel; optional scheduled summaries can be sent via bot at month-end.
+- Maintenance: Back-up/restore the SQLite database, adjust users/consumables/thresholds, and update bot or Ngrok settings as needed.
+
 ## Key Features
 
 - PyQt6 desktop interface for transactions, users, permissions, and audit history.
